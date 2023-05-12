@@ -1,6 +1,6 @@
-package hideonbush3.springboot.semiprojectv6boot.dao;
+package hideonbush3.springboot.semiprojectv6.dao;
 
-import hideonbush3.springboot.semiprojectv6boot.model.Board;
+import hideonbush3.springboot.semiprojectv6.model.Board;
 
 import java.util.List;
 import java.util.Map;

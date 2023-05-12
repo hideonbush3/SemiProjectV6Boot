@@ -3,7 +3,7 @@
 <mapper namespace="board">
     <select id="selectBoard" statementType="PREPARED"
             parameterType="int"
-            resultType="hideonbush3.springboot.semiprojectv6boot.model.Board">
+            resultType="hideonbush3.springboot.semiprojectv6.model.Board">
         select bno, title, userid, thumbs, views, regdate from board
         order by bno desc limit #{stbno}, 25
     </select>
@@ -11,7 +11,7 @@
     <!-- 동적 질의문으로 검색기능 구현 -->
     <!-- 단, 컬럼명이나 테이블명에는 #{}가 아닌 ${}를 사용! -->
     <select id="selectFindBoard" statementType="PREPARED" parameterType="map"
-            resultType="hideonbush3.springboot.semiprojectv6boot.model.Board">
+            resultType="hideonbush3.springboot.semiprojectv6.model.Board">
         select bno, title, userid, thumbs, views, regdate from board
 
         <if test="ftype != 'titcont'">
@@ -40,12 +40,12 @@
             content like concat('%', #{fkey}, '%')</if>
     </select>
 
-    <select id="selectOneBoard" statementType="PREPARED" parameterType="String" resultType="hideonbush3.springboot.semiprojectv6boot.model.Board">
+    <select id="selectOneBoard" statementType="PREPARED" parameterType="String" resultType="hideonbush3.springboot.semiprojectv6.model.Board">
         select * from board where bno = #{bno}
     </select>
 
     <insert id="insertBoard" statementType="PREPARED"
-            parameterType="hideonbush3.springboot.semiprojectv6boot.model.Board">
+            parameterType="hideonbush3.springboot.semiprojectv6.model.Board">
         insert into board (title, userid, content) values (#{title}, #{userid}, #{content});
     </insert>
 

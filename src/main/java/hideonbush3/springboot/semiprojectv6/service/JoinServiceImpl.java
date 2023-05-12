@@ -1,9 +1,9 @@
-package hideonbush3.springboot.semiprojectv6boot.service;
+package hideonbush3.springboot.semiprojectv6.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import hideonbush3.springboot.semiprojectv6boot.dao.JoinDao;
-import hideonbush3.springboot.semiprojectv6boot.model.Member;
+import hideonbush3.springboot.semiprojectv6.dao.JoinDao;
+import hideonbush3.springboot.semiprojectv6.model.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package hideonbush3.springboot.semiprojectv6boot.dao;
+package hideonbush3.springboot.semiprojectv6.dao;
 
-import hideonbush3.springboot.semiprojectv6boot.model.Member;
-import hideonbush3.springboot.semiprojectv6boot.model.Zipcode;
+import hideonbush3.springboot.semiprojectv6.model.Member;
+import hideonbush3.springboot.semiprojectv6.model.Zipcode;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

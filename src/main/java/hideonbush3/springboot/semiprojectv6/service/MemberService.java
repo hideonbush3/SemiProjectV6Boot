@@ -1,6 +1,6 @@
-package hideonbush3.springboot.semiprojectv6boot.service;
+package hideonbush3.springboot.semiprojectv6.service;
 
-import hideonbush3.springboot.semiprojectv6boot.model.Member;
+import hideonbush3.springboot.semiprojectv6.model.Member;
 
 import javax.servlet.http.HttpSession;
 

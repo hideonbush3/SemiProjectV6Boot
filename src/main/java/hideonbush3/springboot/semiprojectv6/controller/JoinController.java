@@ -1,7 +1,7 @@
-package hideonbush3.springboot.semiprojectv6boot.controller;
+package hideonbush3.springboot.semiprojectv6.controller;
 
-import hideonbush3.springboot.semiprojectv6boot.model.Member;
-import hideonbush3.springboot.semiprojectv6boot.service.JoinService;
+import hideonbush3.springboot.semiprojectv6.model.Member;
+import hideonbush3.springboot.semiprojectv6.service.JoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,29 +20,29 @@ public class JoinController {
 
     @GetMapping("/agree")
     public String agree(){
-        return "join/agree.tiles";
+        return "join/agree";
     }
 
     @GetMapping("/checkme")
     public String checkme(){
-        return "join/checkme.tiles";
+        return "join/checkme";
     }
 
     @PostMapping("/joinme")
     public ModelAndView joinmeok(Member mb){
         ModelAndView mv = new ModelAndView();
         mv.addObject("mb", mb);
-        mv.setViewName("join/joinme.tiles");
+        mv.setViewName("join/joinme");
         return mv;
     }
 
     // 회원가입 처리
     @PostMapping("/joinok")
     public String joinok(Member m) {
-        String view = "error.tiles";
+        String view = "error";
 
         if (jnsrv.newMember(m)){
-            view = "join/joinok.tiles";
+            view = "join/joinok";
         }
         return view;
     }
