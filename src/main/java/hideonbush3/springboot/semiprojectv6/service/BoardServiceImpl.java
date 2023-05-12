@@ -1,7 +1,7 @@
-package hideonbush3.springboot.semiprojectv6boot.service;
+package hideonbush3.springboot.semiprojectv6.service;
 
-import hideonbush3.springboot.semiprojectv6boot.dao.BoardDAO;
-import hideonbush3.springboot.semiprojectv6boot.model.Board;
+import hideonbush3.springboot.semiprojectv6.dao.BoardDAO;
+import hideonbush3.springboot.semiprojectv6.model.Board;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

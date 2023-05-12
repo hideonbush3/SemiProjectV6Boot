@@ -1,4 +1,4 @@
-package hideonbush3.springboot.semiprojectv6boot;
+package hideonbush3.springboot.semiprojectv6;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

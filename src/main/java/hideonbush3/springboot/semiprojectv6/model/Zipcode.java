@@ -1,4 +1,4 @@
-package hideonbush3.springboot.semiprojectv6boot.model;
+package hideonbush3.springboot.semiprojectv6.model;
 
 public class Zipcode {
     private String zipcode;

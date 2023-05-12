@@ -1,6 +1,6 @@
-package hideonbush3.springboot.semiprojectv6boot.service;
+package hideonbush3.springboot.semiprojectv6.service;
 
-import hideonbush3.springboot.semiprojectv6boot.model.Board;
+import hideonbush3.springboot.semiprojectv6.model.Board;
 
 import java.util.List;
 

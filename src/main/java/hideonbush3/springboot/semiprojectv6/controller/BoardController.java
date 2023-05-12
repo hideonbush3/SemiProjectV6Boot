@@ -1,7 +1,7 @@
-package hideonbush3.springboot.semiprojectv6boot.controller;
+package hideonbush3.springboot.semiprojectv6.controller;
 
-import hideonbush3.springboot.semiprojectv6boot.model.Board;
-import hideonbush3.springboot.semiprojectv6boot.service.BoardService;
+import hideonbush3.springboot.semiprojectv6.model.Board;
+import hideonbush3.springboot.semiprojectv6.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,7 @@ public class BoardController {
     public ModelAndView list(int cpg) {
         ModelAndView mv = new ModelAndView();
 
-        mv.setViewName("board/list.tiles");
+        mv.setViewName("board/list");
         mv.addObject("bdlist", bdsrv.readBoard(cpg));   // 현재페이지에 출력할 게시글리스트
         mv.addObject("cpg", cpg);   // 현재페이지 번호
         mv.addObject("stpg", ((cpg - 1) / 10) * 10 + 1);
@@ -33,7 +33,7 @@ public class BoardController {
     public ModelAndView find(int cpg, String ftype, String fkey){
         ModelAndView mv = new ModelAndView();
 
-        mv.setViewName("board/list.tiles");
+        mv.setViewName("board/list");
         mv.addObject("bdlist", bdsrv.readBoard(cpg, ftype, fkey));
         mv.addObject("cpg", cpg);   // 현재페이지 번호
         mv.addObject("stpg", ((cpg - 1) / 10) * 10 + 1);
@@ -43,12 +43,12 @@ public class BoardController {
 
     @GetMapping("/write")
     public String write() {
-        return "board/write.tiles";
+        return "board/write";
     }
 
     @PostMapping("/write")
     public String writeok(Board bd) {
-        String viewPage = "error.tiles";
+        String viewPage = "error";
         if(bdsrv.newBoard(bd)){
             viewPage = "redirect:/board/list?cpg=1";
         }
@@ -59,7 +59,7 @@ public class BoardController {
 
         ModelAndView mv = new ModelAndView();
         mv.addObject("bd", bdsrv.readOneBoard(bno));
-        mv.setViewName("board/view.tiles");
+        mv.setViewName("board/view");
 
         return mv;
     }

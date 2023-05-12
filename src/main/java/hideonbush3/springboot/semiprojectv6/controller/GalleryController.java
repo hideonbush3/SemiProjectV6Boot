@@ -1,4 +1,4 @@
-package hideonbush3.springboot.semiprojectv6boot.controller;
+package hideonbush3.springboot.semiprojectv6.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +10,7 @@ public class GalleryController {
 
     @GetMapping("/list")
     public String list() {
-        return "gallery/list.tiles";
+        return "gallery/list";
     }
 
 }
